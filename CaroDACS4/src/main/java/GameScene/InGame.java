@@ -385,6 +385,11 @@ public class InGame extends javax.swing.JFrame {
         btnNewGame.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnNewGame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_new_file_24px.png"))); // NOI18N
         btnNewGame.setText("Ván mới");
+        btnNewGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewGameActionPerformed(evt);
+            }
+        });
 
         btnUndo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnUndo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_undo_24px.png"))); // NOI18N
@@ -441,10 +446,10 @@ public class InGame extends javax.swing.JFrame {
         lbPlayerNameId1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbPlayerNameId1.setText("Hoang");
 
-        lbActive1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_sphere_30px.png"))); // NOI18N
+        lbActive1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_sphere_30px.png"))); // NOI18N
 
         lbVersus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbVersus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_sword_48px.png"))); // NOI18N
+        lbVersus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_sword_48px.png"))); // NOI18N
 
         lbAvatar2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbAvatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avatar/icons8_circled_user_female_skin_type_7_96px.png"))); // NOI18N
@@ -454,13 +459,13 @@ public class InGame extends javax.swing.JFrame {
         lbPlayerNameId2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbPlayerNameId2.setText("Hien");
 
-        lbActive2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_sphere_30px.png"))); // NOI18N
+        lbActive2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_sphere_30px.png"))); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_round_24px.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_round_24px.png"))); // NOI18N
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_delete_24px_1.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_delete_24px_1.png"))); // NOI18N
 
         javax.swing.GroupLayout plPlayerLayout = new javax.swing.GroupLayout(plPlayer);
         plPlayer.setLayout(plPlayerLayout);
@@ -629,7 +634,7 @@ public class InGame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -729,6 +734,10 @@ public class InGame extends javax.swing.JFrame {
     private void btnUndoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUndoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUndoActionPerformed
+
+    private void btnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewGameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNewGameActionPerformed
 
     /**
      * @param args the command line arguments

@@ -411,7 +411,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList1);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_contact_24px.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_contact_24px.png"))); // NOI18N
         jButton1.setText("Xem thông tin");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -423,7 +423,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 348, Short.MAX_VALUE)
+                        .addGap(0, 333, Short.MAX_VALUE)
                         .addComponent(jButton1)))
                 .addContainerGap())
         );

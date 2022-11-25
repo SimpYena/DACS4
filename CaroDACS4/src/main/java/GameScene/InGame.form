@@ -123,6 +123,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="V&#xe1;n m&#x1edb;i"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewGameActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnUndo">
               <Properties>
@@ -283,7 +286,7 @@
                 <Component class="javax.swing.JLabel" name="lbActive1">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/client/view/asset/icons8_sphere_30px.png"/>
+                      <Image iconType="3" name="/asset/icons8_sphere_30px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -291,7 +294,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/client/view/asset/icons8_sword_48px.png"/>
+                      <Image iconType="3" name="/asset/icons8_sword_48px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -320,7 +323,7 @@
                 <Component class="javax.swing.JLabel" name="lbActive2">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/client/view/asset/icons8_sphere_30px.png"/>
+                      <Image iconType="3" name="/asset/icons8_sphere_30px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -328,7 +331,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/client/view/asset/icons8_round_24px.png"/>
+                      <Image iconType="3" name="/asset/icons8_round_24px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -336,7 +339,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/client/view/asset/icons8_delete_24px_1.png"/>
+                      <Image iconType="3" name="/asset/icons8_delete_24px_1.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -443,7 +446,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="157" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" pref="171" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                       </Group>

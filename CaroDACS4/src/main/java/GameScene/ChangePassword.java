@@ -61,13 +61,13 @@ public class ChangePassword extends javax.swing.JFrame {
         setResizable(false);
 
         lbBirthday1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbBirthday1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_forgot_password_48px.png"))); // NOI18N
+        lbBirthday1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_forgot_password_48px.png"))); // NOI18N
 
         lbBirthday2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbBirthday2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_password_48px.png"))); // NOI18N
+        lbBirthday2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_password_48px.png"))); // NOI18N
 
         lbBirthday3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbBirthday3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_forgot_password_48px.png"))); // NOI18N
+        lbBirthday3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_forgot_password_48px.png"))); // NOI18N
 
         jLabel9.setText("Mật khẩu cũ");
 
@@ -77,7 +77,7 @@ public class ChangePassword extends javax.swing.JFrame {
 
         pgbLoading.setIndeterminate(true);
 
-        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_cancel_24px.png"))); // NOI18N
+        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_cancel_24px.png"))); // NOI18N
         btnCancel.setText("Hủy");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +85,7 @@ public class ChangePassword extends javax.swing.JFrame {
             }
         });
 
-        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_ok_24px.png"))); // NOI18N
+        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_ok_24px.png"))); // NOI18N
         btnSave.setText("Lưu");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

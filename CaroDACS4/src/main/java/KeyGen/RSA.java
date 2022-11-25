@@ -112,11 +112,11 @@ public class RSA {
 
     public static void main(String[] args) throws Exception {
         RSA serverSide = new RSA()
-                .preparePrivateKey("src/Server/rsa_keypair/privateKey")
-                .preparePublicKey("src/Server/rsa_keypair/publicKey");
+                .preparePrivateKey("src/main/resources/rsa_keypairsrc/privateKey")
+                .preparePublicKey("src/main/resources/rsa_keypairsrc/publicKey");
 
         RSA clientSide = new RSA()
-                .preparePublicKey("src/Server/rsa_keypair/publicKey");
+                .preparePublicKey("src/main/resources/rsa_keypairsrc/publicKey");
 
         String original = "stackjava.com";
         System.out.println("Original: " + original);

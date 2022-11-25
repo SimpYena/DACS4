@@ -19,8 +19,8 @@ import java.security.PublicKey;
  */
 public class RSAGenerator {
 
-    public static final String PUBLIC_KEY_FILE = "rsa_keypair/publicKey";
-    public static final String PRIVATE_KEY_FILE = "rsa_keypair/privateKey";
+    public static final String PUBLIC_KEY_FILE = "src/publicKey";
+    public static final String PRIVATE_KEY_FILE = "src/privateKey";
     public static String basePath = "";
 
     private KeyPairGenerator keyGen;
@@ -79,6 +79,6 @@ public class RSAGenerator {
     }
 
     public static void main(String[] args) {
-        new RSAGenerator(1024, "src/main/java/").generateKeysToFile();
+        new RSAGenerator(1024, "src/main/resources/rsa_keypair").generateKeysToFile();
     }
 }

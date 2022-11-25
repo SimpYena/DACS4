@@ -39,7 +39,7 @@ public class RunServer {
 
             // init rsa key
             serverSide = new RSA()
-                    .preparePrivateKey("src/main/java/rsa_keypair/privateKey");
+                    .preparePrivateKey("src/main/resources/rsa_keypairsrc/privateKey");
 
             // init managers
             clientManager = new ClientManager();

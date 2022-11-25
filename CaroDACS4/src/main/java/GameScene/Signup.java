@@ -89,36 +89,36 @@ public class Signup extends javax.swing.JFrame {
         lbHeaderText.setFont(new java.awt.Font("Tahoma", 1, 25)); // NOI18N
         lbHeaderText.setText("THAM GIA");
 
-        lbEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_email_48px.png"))); // NOI18N
+        lbEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_email_48px.png"))); // NOI18N
 
         txEmail.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txEmail.setToolTipText("Email");
 
-        lbUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_name_48px_1.png"))); // NOI18N
+        lbUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_name_48px_1.png"))); // NOI18N
 
         txName.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txName.setToolTipText("Họ tên");
 
-        lbPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_password_48px.png"))); // NOI18N
+        lbPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_password_48px.png"))); // NOI18N
 
         txPassword.setToolTipText("Mật khẩu");
 
         txRetypePassword.setToolTipText("Mật khẩu");
 
-        lbPassword1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_password_reset_48px.png"))); // NOI18N
+        lbPassword1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_forgot_password_48px.png"))); // NOI18N
 
         jLabel1.setText("Email");
 
         jLabel2.setText("Mật khẩu");
 
         lbBirthday.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbBirthday.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_birthday_cake_48px_2.png"))); // NOI18N
+        lbBirthday.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_birthday_cake_48px_2.png"))); // NOI18N
 
         txYearOfBirth.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txYearOfBirth.setToolTipText("Năm sinh");
 
         lbGender.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbGender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_gender_48px.png"))); // NOI18N
+        lbGender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_gender_48px.png"))); // NOI18N
 
         cbGender.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         cbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ", "Ẩn" }));
@@ -233,6 +233,11 @@ public class Signup extends javax.swing.JFrame {
                 btnSignupMouseClicked(evt);
             }
         });
+        btnSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignupActionPerformed(evt);
+            }
+        });
 
         cbAvatar.setToolTipText("Ảnh đại diện");
         cbAvatar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -336,6 +341,10 @@ public class Signup extends javax.swing.JFrame {
         this.dispose();
         RunClient.openScene(RunClient.SceneName.LOGIN);
     }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void btnSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSignupActionPerformed
 
     /**
      * @param args the command line arguments

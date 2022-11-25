@@ -177,18 +177,18 @@ public class Profile extends javax.swing.JFrame {
 
         plContainer.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Người chơi", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Consolas", 1, 14))); // NOI18N
 
-        lbEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_email_48px.png"))); // NOI18N
+        lbEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_email_48px.png"))); // NOI18N
 
         txEmail.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txEmail.setToolTipText("Email");
 
-        lbUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_name_48px_1.png"))); // NOI18N
+        lbUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_name_48px_1.png"))); // NOI18N
 
         txName.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txName.setToolTipText("Họ tên");
 
         lbGender.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbGender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_gender_48px.png"))); // NOI18N
+        lbGender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_gender_48px.png"))); // NOI18N
 
         cbGender.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         cbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ", "Ẩn" }));
@@ -196,13 +196,13 @@ public class Profile extends javax.swing.JFrame {
         cbGender.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lbBirthday.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbBirthday.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_birthday_cake_48px_2.png"))); // NOI18N
+        lbBirthday.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_birthday_cake_48px_2.png"))); // NOI18N
 
         txYearOfBirth.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txYearOfBirth.setToolTipText("Năm sinh");
 
         btnProfileSave.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProfileSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_ok_24px.png"))); // NOI18N
+        btnProfileSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_ok_24px.png"))); // NOI18N
         btnProfileSave.setText("Lưu");
         btnProfileSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,7 +211,7 @@ public class Profile extends javax.swing.JFrame {
         });
 
         btnProfileCancel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProfileCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_replay_24px.png"))); // NOI18N
+        btnProfileCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_replay_24px.png"))); // NOI18N
         btnProfileCancel.setText("Làm mới");
         btnProfileCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +228,7 @@ public class Profile extends javax.swing.JFrame {
         });
 
         lbPassword.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lbPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_password_48px.png"))); // NOI18N
+        lbPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_password_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout plProfileBtnLayout = new javax.swing.GroupLayout(plProfileBtn);
         plProfileBtn.setLayout(plProfileBtnLayout);
@@ -314,7 +314,7 @@ public class Profile extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(plProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pgbProfileLoading, javax.swing.GroupLayout.DEFAULT_SIZE, 18, Short.MAX_VALUE)
+                .addComponent(pgbProfileLoading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -364,7 +364,7 @@ public class Profile extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbScore, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                    .addComponent(lbScore, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                     .addComponent(lbMatchCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbWinRate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbCurrentStreak, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -433,7 +433,7 @@ public class Profile extends javax.swing.JFrame {
                     .addComponent(lbWinCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(0, 29, Short.MAX_VALUE)))
+                        .addGap(0, 31, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -499,7 +499,7 @@ public class Profile extends javax.swing.JFrame {
                     .addComponent(lbLoseCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(0, 36, Short.MAX_VALUE)))
+                        .addGap(0, 38, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
