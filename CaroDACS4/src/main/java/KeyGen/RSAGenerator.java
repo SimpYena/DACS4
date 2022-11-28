@@ -79,6 +79,6 @@ public class RSAGenerator {
     }
 
     public static void main(String[] args) {
-        new RSAGenerator(1024, "src/main/resources/rsa_keypair").generateKeysToFile();
+        new RSAGenerator(1024, "src/main/resources/").generateKeysToFile();
     }
 }

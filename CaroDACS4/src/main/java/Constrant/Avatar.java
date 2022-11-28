@@ -10,9 +10,9 @@ package Constrant;
  */
 public class Avatar {
 
-    public static final String ASSET_PATH = "src/main/java/view/asset/";
-    public static final String PATH = "src/main/java/asset/avatar/";
-    public static final String PATH_RESOURCE = "src/main/java/asset/avatar/";
+    public static final String ASSET_PATH = "src/main/resources/asset/";
+    public static final String PATH = "src/main/resources/avatar/";
+    public static final String PATH_RESOURCE = "src/main/resources/avatar/";
     public static final String EMPTY_AVATAR = "icons8_confusion_96px.png";
 
   
