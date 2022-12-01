@@ -23,13 +23,13 @@ public class Login extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
         // default is hidden
-        pgbLoading.setVisible(false);
+      
     }
 
     public void setLoading(boolean isLoading) {
         btnSignup.setEnabled(!isLoading);
         btnLogin.setEnabled(!isLoading);
-        pgbLoading.setVisible(isLoading);
+       
     }
 
     /**
@@ -51,18 +51,17 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lbPassword = new javax.swing.JLabel();
         txPassword = new javax.swing.JPasswordField();
-        pgbLoading = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng Nhập");
         setResizable(false);
 
         lbHeaderText.setFont(new java.awt.Font("Tahoma", 1, 25)); // NOI18N
-        lbHeaderText.setText("CHÀO MỪNG");
+        lbHeaderText.setText("LOGIN");
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_login_32px.png"))); // NOI18N
-        btnLogin.setText("ĐĂNG NHẬP");
+        btnLogin.setText("LOGIN");
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +69,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        btnSignup.setText("Đăng ký?");
+        btnSignup.setText("Sign up");
         btnSignup.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +84,7 @@ public class Login extends javax.swing.JFrame {
         txEmail.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         txEmail.setToolTipText("Email");
 
-        jLabel2.setText("Mật khẩu");
+        jLabel2.setText("Password");
 
         lbPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_password_48px.png"))); // NOI18N
 
@@ -128,8 +127,6 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        pgbLoading.setIndeterminate(true);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -140,8 +137,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbHeaderText)
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSignup)
-                    .addComponent(pgbLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSignup))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -151,9 +147,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(lbHeaderText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pgbLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSignup)
@@ -232,7 +226,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lbHeaderText;
     private javax.swing.JLabel lbPassword;
     private javax.swing.JLabel lbUserName;
-    private javax.swing.JProgressBar pgbLoading;
     private javax.swing.JTextField txEmail;
     private javax.swing.JPasswordField txPassword;
     // End of variables declaration//GEN-END:variables

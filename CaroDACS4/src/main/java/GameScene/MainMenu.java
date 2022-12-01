@@ -167,9 +167,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         plBtns = new javax.swing.JPanel();
-        btnCreateRoom = new javax.swing.JButton();
         btnFindMatch = new javax.swing.JButton();
-        btnJoin = new javax.swing.JButton();
         btnWatch = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
@@ -220,24 +218,24 @@ public class MainMenu extends javax.swing.JFrame {
         setTitle("Caro Game");
         setResizable(false);
 
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+
+        plBtns.setBackground(new java.awt.Color(153, 255, 255));
         plBtns.setBorder(javax.swing.BorderFactory.createTitledBorder("Chức năng"));
 
-        btnCreateRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_add_24px.png"))); // NOI18N
-        btnCreateRoom.setText("Tạo phòng");
-
+        btnFindMatch.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.activeTitleBackground"));
+        btnFindMatch.setForeground(new java.awt.Color(255, 0, 0));
         btnFindMatch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_circled_play_24px.png"))); // NOI18N
-        btnFindMatch.setText("Tìm trận");
+        btnFindMatch.setText("Play");
         btnFindMatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFindMatchActionPerformed(evt);
             }
         });
 
-        btnJoin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_open_door_24px.png"))); // NOI18N
-        btnJoin.setText("Vào phòng");
-
+        btnWatch.setBackground(new java.awt.Color(51, 255, 51));
         btnWatch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_vision_24px.png"))); // NOI18N
-        btnWatch.setText("Vào xem");
+        btnWatch.setText("Watch");
         btnWatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnWatchActionPerformed(evt);
@@ -250,29 +248,25 @@ public class MainMenu extends javax.swing.JFrame {
             plBtnsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, plBtnsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnFindMatch)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnWatch)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnJoin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCreateRoom)
-                .addContainerGap())
+                .addComponent(btnFindMatch, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
+                .addComponent(btnWatch, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         plBtnsLayout.setVerticalGroup(
             plBtnsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(plBtnsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(plBtnsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCreateRoom)
                     .addComponent(btnFindMatch)
-                    .addComponent(btnJoin)
                     .addComponent(btnWatch))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1.setBackground(new java.awt.Color(51, 255, 255));
+
         btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_logout_rounded_left_24px.png"))); // NOI18N
-        btnLogout.setText("Đăng xuất");
+        btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -280,7 +274,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         btnProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_contact_24px.png"))); // NOI18N
-        btnProfile.setText("Hồ sơ");
+        btnProfile.setText("Profile");
         btnProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProfileActionPerformed(evt);
@@ -293,10 +287,10 @@ public class MainMenu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnLogout)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnProfile)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,16 +302,18 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        plFindingMatch.setBackground(new java.awt.Color(153, 255, 255));
+
         jProgressBar1.setIndeterminate(true);
 
         lbFindMatch.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbFindMatch.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbFindMatch.setText("Đang tìm trận...");
+        lbFindMatch.setText("Looking for players......");
 
         jProgressBar2.setIndeterminate(true);
 
         btnCancelFindMatch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_cancel_24px.png"))); // NOI18N
-        btnCancelFindMatch.setText("Hủy");
+        btnCancelFindMatch.setText("Cancel");
         btnCancelFindMatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelFindMatchActionPerformed(evt);
@@ -327,19 +323,19 @@ public class MainMenu extends javax.swing.JFrame {
         javax.swing.GroupLayout plFindingMatchLayout = new javax.swing.GroupLayout(plFindingMatch);
         plFindingMatch.setLayout(plFindingMatchLayout);
         plFindingMatchLayout.setHorizontalGroup(
-            plFindingMatchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            plFindingMatchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(plFindingMatchLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCancelFindMatch)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(5, 5, 5))
-            .addGroup(plFindingMatchLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(lbFindMatch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(plFindingMatchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbFindMatch, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(plFindingMatchLayout.createSequentialGroup()
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCancelFindMatch, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)))
+                .addGap(545, 545, 545))
         );
         plFindingMatchLayout.setVerticalGroup(
             plFindingMatchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,6 +349,8 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel5.setBackground(new java.awt.Color(153, 255, 255));
 
         tbListRoom.setAutoCreateRowSorter(true);
         tbListRoom.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -372,7 +370,7 @@ public class MainMenu extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbListRoom);
 
         btnRefreshListRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_replay_24px.png"))); // NOI18N
-        btnRefreshListRoom.setText("Làm mới");
+        btnRefreshListRoom.setText("F5");
         btnRefreshListRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshListRoomActionPerformed(evt);
@@ -383,26 +381,26 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnRefreshListRoom))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRefreshListRoom)
                 .addContainerGap())
         );
 
-        tpRoomAndUser.addTab("Danh sách phòng", jPanel5);
+        tpRoomAndUser.addTab("Room to watch", jPanel5);
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -423,7 +421,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 333, Short.MAX_VALUE)
+                        .addGap(0, 402, Short.MAX_VALUE)
                         .addComponent(jButton1)))
                 .addContainerGap())
         );
@@ -437,22 +435,26 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        tpRoomAndUser.addTab("Người chơi", jPanel3);
+        tpRoomAndUser.addTab("Players", jPanel3);
+
+        plFoundMatch.setBackground(new java.awt.Color(153, 255, 255));
 
         lbFoundMatch.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbFoundMatch.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbFoundMatch.setText("Đã tìm thấy đối thủ ... Vào ngay?");
+        lbFoundMatch.setText("Match found...!!!");
 
+        btnDeclinePairMatch.setBackground(new java.awt.Color(255, 102, 0));
         btnDeclinePairMatch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_cancel_24px.png"))); // NOI18N
-        btnDeclinePairMatch.setText("Từ chối");
+        btnDeclinePairMatch.setText("Decline");
         btnDeclinePairMatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeclinePairMatchActionPerformed(evt);
             }
         });
 
+        btnAcceptPairMatch.setBackground(new java.awt.Color(0, 255, 204));
         btnAcceptPairMatch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_ok_24px.png"))); // NOI18N
-        btnAcceptPairMatch.setText("Chấp nhận");
+        btnAcceptPairMatch.setText("Accept");
         btnAcceptPairMatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptPairMatchActionPerformed(evt);
@@ -468,9 +470,9 @@ public class MainMenu extends javax.swing.JFrame {
         plFoundMatchLayout.setHorizontalGroup(
             plFoundMatchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(plFoundMatchLayout.createSequentialGroup()
-                .addGap(131, 131, 131)
+                .addGap(65, 65, 65)
                 .addComponent(btnDeclinePairMatch)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(52, 52, 52)
                 .addComponent(btnAcceptPairMatch)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, plFoundMatchLayout.createSequentialGroup()
@@ -500,29 +502,33 @@ public class MainMenu extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tpRoomAndUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(plFindingMatch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(plBtns, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(plFoundMatch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(plFoundMatch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(plFindingMatch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(plBtns, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(tpRoomAndUser)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addComponent(plBtns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(plFindingMatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(plFoundMatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tpRoomAndUser, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(plBtns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(plFindingMatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(plFoundMatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tpRoomAndUser, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
+
+        plBtns.getAccessibleContext().setAccessibleName("Game mode");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -534,29 +540,28 @@ public class MainMenu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        RunClient.socketHandler.logout();
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    private void btnAcceptPairMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptPairMatchActionPerformed
+        setDisplayState(State.WAITING_COMPETITOR_ACCEPT);
+        RunClient.socketHandler.acceptPairMatch();
+    }//GEN-LAST:event_btnAcceptPairMatchActionPerformed
 
-    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
-        RunClient.openScene(RunClient.SceneName.PROFILE);
-        RunClient.profileScene.loadProfileData(RunClient.socketHandler.getLoginEmail());
-    }//GEN-LAST:event_btnProfileActionPerformed
+    private void btnDeclinePairMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeclinePairMatchActionPerformed
+        setDisplayState(State.DEFAULT);
+        RunClient.socketHandler.declinePairMatch();
+    }//GEN-LAST:event_btnDeclinePairMatchActionPerformed
 
-    private void btnFindMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindMatchActionPerformed
-        // chỉ gửi yêu cầu lên server chứ ko đổi giao diện ngay
-        // socketHandler sẽ đọc kết quả trả về từ server và quyết định có đổi stateDisplay hay không
-        RunClient.socketHandler.findMatch();
-    }//GEN-LAST:event_btnFindMatchActionPerformed
+    private void btnRefreshListRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshListRoomActionPerformed
+        RunClient.socketHandler.listRoom();
+    }//GEN-LAST:event_btnRefreshListRoomActionPerformed
 
     private void btnCancelFindMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelFindMatchActionPerformed
         // chỉ gửi yêu cầu lên server chứ ko đổi giao diện ngay
@@ -564,15 +569,14 @@ public class MainMenu extends javax.swing.JFrame {
         RunClient.socketHandler.cancelFindMatch();
     }//GEN-LAST:event_btnCancelFindMatchActionPerformed
 
-    private void btnDeclinePairMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeclinePairMatchActionPerformed
-        setDisplayState(State.DEFAULT);
-        RunClient.socketHandler.declinePairMatch();
-    }//GEN-LAST:event_btnDeclinePairMatchActionPerformed
+    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
+        RunClient.openScene(RunClient.SceneName.PROFILE);
+        RunClient.profileScene.loadProfileData(RunClient.socketHandler.getLoginEmail());
+    }//GEN-LAST:event_btnProfileActionPerformed
 
-    private void btnAcceptPairMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptPairMatchActionPerformed
-        setDisplayState(State.WAITING_COMPETITOR_ACCEPT);
-        RunClient.socketHandler.acceptPairMatch();
-    }//GEN-LAST:event_btnAcceptPairMatchActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        RunClient.socketHandler.logout();
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnWatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWatchActionPerformed
         // https://stackoverflow.com/a/38981623
@@ -584,9 +588,11 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnWatchActionPerformed
 
-    private void btnRefreshListRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshListRoomActionPerformed
-        RunClient.socketHandler.listRoom();
-    }//GEN-LAST:event_btnRefreshListRoomActionPerformed
+    private void btnFindMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindMatchActionPerformed
+        // chỉ gửi yêu cầu lên server chứ ko đổi giao diện ngay
+        // socketHandler sẽ đọc kết quả trả về từ server và quyết định có đổi stateDisplay hay không
+        RunClient.socketHandler.findMatch();
+    }//GEN-LAST:event_btnFindMatchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -627,10 +633,8 @@ public class MainMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAcceptPairMatch;
     private javax.swing.JButton btnCancelFindMatch;
-    private javax.swing.JButton btnCreateRoom;
     private javax.swing.JButton btnDeclinePairMatch;
     private javax.swing.JButton btnFindMatch;
-    private javax.swing.JButton btnJoin;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnRefreshListRoom;

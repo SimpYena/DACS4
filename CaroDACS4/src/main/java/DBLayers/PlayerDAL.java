@@ -5,7 +5,7 @@
 package DBLayers;
 
 import DatabaseConnector.Mysqlconnector;
-//import server.db.layers.DTO.Player;
+import DBLayers.PlayerDTO;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

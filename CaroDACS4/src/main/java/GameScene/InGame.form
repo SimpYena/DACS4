@@ -4,6 +4,9 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="title" type="java.lang.String" value="Caro Game"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="cc" green="cc" red="ff" type="rgb"/>
+    </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -49,6 +52,11 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="plRightContainer">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -73,6 +81,9 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="plToolContainer">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Ch&#x1ee9;c n&#x103;ng"/>
@@ -83,31 +94,27 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="btnNewGame" min="-2" pref="104" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Group type="102" alignment="2" attributes="0">
-                              <Component id="btnNewGame" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="6" pref="6" max="6" attributes="0"/>
-                              <Component id="btnUndo" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btnLeaveRoom" alignment="2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="btnUndo" min="-2" pref="106" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="btnLeaveRoom" min="-2" pref="97" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnNewGame" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnUndo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnLeaveRoom" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnLeaveRoom" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -118,10 +125,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/asset/icons8_new_file_24px.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="V&#xe1;n m&#x1edb;i"/>
+                <Property name="text" type="java.lang.String" value="Rematch"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewGameActionPerformed"/>
@@ -132,10 +136,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/asset/icons8_undo_24px.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="&#x110;&#xe1;nh l&#x1ea1;i"/>
+                <Property name="text" type="java.lang.String" value="Undo"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUndoActionPerformed"/>
@@ -146,10 +147,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/asset/icons8_exit_sign_24px.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Tho&#xe1;t ph&#xf2;ng"/>
+                <Property name="text" type="java.lang.String" value="Exit"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLeaveRoomActionPerformed"/>
@@ -180,6 +178,9 @@
           <SubComponents>
             <Container class="javax.swing.JPanel" name="plPlayer">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="cc" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Ng&#x1b0;&#x1edd;i ch&#x1a1;i"/>
@@ -280,7 +281,7 @@
                       <Font name="Consolas" size="14" style="1"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Hoang"/>
+                    <Property name="text" type="java.lang.String" value="Hau"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbActive1">
@@ -317,7 +318,7 @@
                       <Font name="Consolas" size="14" style="1"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Hien"/>
+                    <Property name="text" type="java.lang.String" value="Minh"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbActive2">
@@ -392,12 +393,12 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="N&#x1b0;&#x1edb;c &#x111;i"/>
+                    <Property name="text" type="java.lang.String" value="Turn"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Tr&#x1ead;n &#x111;&#x1ea5;u"/>
+                    <Property name="text" type="java.lang.String" value="Match"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JProgressBar" name="pgbTurnTimer">
@@ -425,8 +426,8 @@
             <Container class="javax.swing.JPanel" name="jPanel3">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Nh&#x1eaf;n tin">
-                    <Property name="tabTitle" type="java.lang.String" value="Nh&#x1eaf;n tin"/>
+                  <JTabbedPaneConstraints tabName="Chat">
+                    <Property name="tabTitle" type="java.lang.String" value="Chat"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -463,7 +464,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txChatInput" min="-2" pref="217" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnSendMessage" pref="93" max="32767" attributes="0"/>
+                              <Component id="btnSendMessage" pref="186" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -492,7 +493,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/asset/icons8_paper_plane_24px.png"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="G&#x1eed;i"/>
+                        <Property name="text" type="java.lang.String" value="Send"/>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnSendMessageMouseClicked"/>
@@ -521,8 +522,8 @@
             <Container class="javax.swing.JPanel" name="jPanel4">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Ng&#x1b0;&#x1edd;i trong ph&#xf2;ng">
-                    <Property name="tabTitle" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i trong ph&#xf2;ng"/>
+                  <JTabbedPaneConstraints tabName="Players">
+                    <Property name="tabTitle" type="java.lang.String" value="Players"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -532,7 +533,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" pref="316" max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" pref="409" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>

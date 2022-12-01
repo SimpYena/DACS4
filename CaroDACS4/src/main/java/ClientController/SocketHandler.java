@@ -314,6 +314,14 @@ public class SocketHandler {
     }
 
     private void onReceiveCreateRoom(String received) {
+         String[] splitted = received.split(";");
+        String roomId = splitted[2];
+        roomId = 
+
+        // save room id
+        this.roomId = roomId;
+        dataRoom(roomId);
+        
 
     }
 
@@ -395,7 +403,7 @@ public class SocketHandler {
             JOptionPane.showMessageDialog(RunClient.mainMenuScene, failedMsg, "Không thể ghép trận", JOptionPane.ERROR_MESSAGE);
 
         } else if (status.equals("success")) {
-            // System.out.println("Ghép trận thành công, đang chờ server cho vào phòng.");
+            
         }
     }
 
@@ -672,7 +680,9 @@ public class SocketHandler {
     public void listRoom() {
         sendData(StreamData.Type.LIST_ROOM.name());
     }
-
+    public void createRoom() {
+        sendData(StreamData.Type.CREATE_ROOM.name() +";" + roomId);
+    }
     public void watchRoom(String roomId) {
         sendData(StreamData.Type.WATCH_ROOM.name() + ";" + roomId);
     }

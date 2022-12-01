@@ -58,10 +58,10 @@ public class ConnectServer extends javax.swing.JFrame {
         txPort.setText("5056");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel2.setText("KẾT NỐI SERVER");
+        jLabel2.setText("CONNECT TO SERVER");
 
         btnConnect.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        btnConnect.setText("Kết nối");
+        btnConnect.setText("Connect");
         btnConnect.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConnect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

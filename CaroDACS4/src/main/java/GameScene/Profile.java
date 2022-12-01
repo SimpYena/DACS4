@@ -203,7 +203,7 @@ public class Profile extends javax.swing.JFrame {
 
         btnProfileSave.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProfileSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_ok_24px.png"))); // NOI18N
-        btnProfileSave.setText("Lưu");
+        btnProfileSave.setText("Save");
         btnProfileSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProfileSaveActionPerformed(evt);
@@ -212,7 +212,7 @@ public class Profile extends javax.swing.JFrame {
 
         btnProfileCancel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProfileCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_replay_24px.png"))); // NOI18N
-        btnProfileCancel.setText("Làm mới");
+        btnProfileCancel.setText("Refresh");
         btnProfileCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProfileCancelActionPerformed(evt);
@@ -220,7 +220,7 @@ public class Profile extends javax.swing.JFrame {
         });
 
         btnProfileChangePass.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProfileChangePass.setText("Đổi mật khẩu");
+        btnProfileChangePass.setText("Change Pass");
         btnProfileChangePass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProfileChangePassActionPerformed(evt);
@@ -238,13 +238,14 @@ public class Profile extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lbPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnProfileChangePass)
-                .addContainerGap(108, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, plProfileBtnLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnProfileCancel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnProfileSave)
+                .addGroup(plProfileBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(plProfileBtnLayout.createSequentialGroup()
+                        .addComponent(btnProfileCancel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnProfileSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(plProfileBtnLayout.createSequentialGroup()
+                        .addComponent(btnProfileChangePass)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         plProfileBtnLayout.setVerticalGroup(
@@ -253,11 +254,13 @@ public class Profile extends javax.swing.JFrame {
                 .addGroup(plProfileBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lbPassword)
                     .addComponent(btnProfileChangePass))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(plProfileBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnProfileSave)
-                    .addComponent(btnProfileCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(plProfileBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(plProfileBtnLayout.createSequentialGroup()
+                        .addComponent(btnProfileCancel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnProfileSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pgbProfileLoading.setIndeterminate(true);
@@ -266,29 +269,29 @@ public class Profile extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbEmail)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txEmail))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbUserName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txName))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbGender)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbGender, 0, 228, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbBirthday)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txYearOfBirth)))
+                .addContainerGap(32, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pgbProfileLoading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(lbEmail)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txEmail))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(lbUserName)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txName))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(lbGender)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(cbGender, 0, 228, Short.MAX_VALUE)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(lbBirthday)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txYearOfBirth))))
                     .addComponent(plProfileBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -322,16 +325,16 @@ public class Profile extends javax.swing.JFrame {
         cbAvatar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setText("Điểm");
+        jLabel1.setText("ELO");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Trận");
+        jLabel2.setText("Match");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setText("Chuỗi");
+        jLabel3.setText("Streak");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setText("Thắng");
+        jLabel4.setText("Winrate");
 
         lbScore.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         lbScore.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -410,14 +413,14 @@ public class Profile extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(cbAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 102), 2, true));
         jPanel1.setToolTipText("Số trận thắng");
         jPanel1.setPreferredSize(new java.awt.Dimension(80, 80));
 
-        jLabel5.setText("Thắng");
+        jLabel5.setText("Win");
 
         lbWinCount.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         lbWinCount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -433,7 +436,7 @@ public class Profile extends javax.swing.JFrame {
                     .addComponent(lbWinCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(0, 31, Short.MAX_VALUE)))
+                        .addGap(0, 38, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -442,7 +445,7 @@ public class Profile extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbWinCount, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addComponent(lbWinCount, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -450,7 +453,7 @@ public class Profile extends javax.swing.JFrame {
         jPanel2.setToolTipText("Số trận hòa");
         jPanel2.setPreferredSize(new java.awt.Dimension(80, 80));
 
-        jLabel6.setText("Hòa");
+        jLabel6.setText("Draw");
 
         lbTieCount.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         lbTieCount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -466,7 +469,7 @@ public class Profile extends javax.swing.JFrame {
                     .addComponent(lbTieCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(0, 42, Short.MAX_VALUE)))
+                        .addGap(0, 31, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -475,7 +478,7 @@ public class Profile extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbTieCount, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addComponent(lbTieCount, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -483,7 +486,7 @@ public class Profile extends javax.swing.JFrame {
         jPanel4.setToolTipText("Số trận thua");
         jPanel4.setPreferredSize(new java.awt.Dimension(80, 80));
 
-        jLabel7.setText("Thua");
+        jLabel7.setText("Lose");
 
         lbLoseCount.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         lbLoseCount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -499,7 +502,7 @@ public class Profile extends javax.swing.JFrame {
                     .addComponent(lbLoseCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(0, 38, Short.MAX_VALUE)))
+                        .addGap(0, 34, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -508,7 +511,7 @@ public class Profile extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbLoseCount, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addComponent(lbLoseCount, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

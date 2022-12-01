@@ -69,16 +69,16 @@ public class ChangePassword extends javax.swing.JFrame {
         lbBirthday3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         lbBirthday3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_forgot_password_48px.png"))); // NOI18N
 
-        jLabel9.setText("Mật khẩu cũ");
+        jLabel9.setText("Old Password");
 
-        jLabel10.setText("Mật khẩu mới");
+        jLabel10.setText("New Password");
 
-        jLabel11.setText("Nhập lại mật khẩu mới");
+        jLabel11.setText("Re-enter new password");
 
         pgbLoading.setIndeterminate(true);
 
         btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_cancel_24px.png"))); // NOI18N
-        btnCancel.setText("Hủy");
+        btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -86,7 +86,7 @@ public class ChangePassword extends javax.swing.JFrame {
         });
 
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_ok_24px.png"))); // NOI18N
-        btnSave.setText("Lưu");
+        btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
